@@ -1,0 +1,249 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="mainModuleApp">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Wellcome to Krakow</title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <link href="img/favicon.ico" rel="icon"/>
+
+    <base href="/" />
+
+    <script src="libs/angular.js"></script>
+    <script src="libs/angular_route.js"></script>
+    <script src="libs/jquery/jquery-2.1.4.min.js"></script>
+
+    <link href="libs/bootstrap/css/bootstrap.css" rel="stylesheet" />
+    <link href="libs/bootstrap/css/bootstrap-theme.css" rel="stylesheet" />
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <link href="css/fonts.css" rel="stylesheet" />
+
+    <script src="scripts/ang_module.js"></script> 
+</head>
+<body ng-controller="mainModuleCtrl">
+
+    <div >
+        <header>
+            <nav class="menu_fixed">
+                <div class="topLine"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle menu-btn" data-toggle="collapse" data-target="#top_menu">
+                                <span class="glyphicon glyphicon-menu-hamburger"></span>
+                            </button>
+                            <a href="index.html" class="navbar-brand img_pad">
+                                <img src="img/logo1.png" alt="Welcome to Krakow" id="wtkImg"/>
+                            </a>                           
+                            <span class="phone_number"><i class="glyphicon glyphicon-phone"></i> +48 570 042 478</span>
+                        </div>
+
+                        <div class="collapse navbar-collapse navbar-right" id="top_menu">
+                            <ul class="menu" id="mainMenu">
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/tours">Tours</a></li>
+                                <li><a href="/booking" onclick="showHideTitleBlock()">Booking</a></li>
+                                <li><a href="#">Photos</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="container bkgr_header">
+                <div class="row">
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <div class="titleBlock" id="titleBlock">
+                            <a href="/booking" class="my_btn btn_md btn" onclick="showHideTitleBlock()">Book now</a>
+                        </div>
+                        <div ng-view></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="params_s">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="param_block">
+                            <i class="fa fa-bus"></i>
+                            <h3>Wide range of tours available</h3>
+                            <p>We organise regular and private tours, for small and large groups</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="param_block">
+                            <i class="fa fa-thumbs-o-up"></i>
+                            <h3>Experienced staff</h3>
+                            <p>We cooperate only with qualified and experienced tour leaders and guides</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                        <div class="param_block">
+                            <i class="fa fa-star"></i>
+                            <h3>Best responses</h3>
+                            <p>We are a new company among tour operators. But we have already had a lot of good responses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="work_s">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-4 col-sm-12 p0">
+                        <div class="work_block">
+                            <div class="image_wrap">
+                                <div class="work_descr">
+                                    <h4>Auschwitz Birkenau</h4>
+                                    <p>Auschwitz – Birkenau is the site of the most notorious mass murder in the history of humanity. Its remnants have been memorialised and serve as a mirror of the human soul and a tool for self-reflection</p>
+                                </div>
+                            </div>
+                            <img src="img/birkenau2.jpg" class="img-responsive" alt="Auschwitz Birkenau" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 p0">
+                        <div class="work_block">
+                            <div class="image_wrap">
+                                <div class="work_descr">
+                                    <h4>Wieliczka – Salt Mine</h4>
+                                    <p>Wieliczka – Salt Mine is one of the most valuable monuments of material and spiritual culture in Poland</p>
+                                </div>
+                            </div>
+                            <img src="img/wieliczka1.jpeg" class="img-responsive" alt="Wieliczka – Salt Mine" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12 p0">
+                        <div class="work_block">
+                            <div class="image_wrap">
+                                <div class="work_descr">
+                                    <h4>Transfers on request</h4>
+                                    <p>Our regular private routes are: Zakopane, Wieliczka Salt Mine, Auschwitz-Birkenau Museum and John Paul II <b>International Airport Kraków–Balice</b>. It is possible to book return transfers that include driver’s waiting time as well, so you can enjoy your individually organized visit combined with professional return transfer. You will be provided with a comfortable vehicle dedicated to you only</p>
+                                </div>
+                            </div>
+                            <img src="img/zakopane2.jpg" class="img-responsive" alt="Zakopane" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="trip">
+            <div class="panel-heading text-center"><h3>Read more about places of interest in Cracow...</h3></div>
+            <div class="container-fluid">
+                <div class="row trip_s">
+                    <div class="col-md-3 col-sm-6 p0 trip_item">
+                        <img src="img/wawel.jpg" class="img-responsive" alt="Wawel Castle" />
+                        <h4>Wawel Castle</h4>
+                        <span>The fortified architectural complex</span>
+                        <p>
+                            Built at the behest of King Casimir III the Great, it consists of a number of structures situated around the Italian-styled main courtyard.
+                        </p>
+                        <div class="read_btn">
+                            <a class="btn btn_blue"><i class="fa fa-info"> Read more</i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 p0 trip_item">
+                        <img src="img/oldtown1.jpg" class="img-responsive" alt="Old Town" />
+                        <h4>Old town</h4>
+                        <span>The central historic district of Krakow</span>
+                        <p>
+                            It is one of the most famous old districts in Poland today and was the center of Poland's political life from 1038 until King Sigismund III Vasa relocated his court to Warsaw in 1596.
+                        </p>
+                        <div class="read_btn">
+                            <a class="btn btn_blue"><i class="fa fa-info"> Read more</i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 p0 trip_item">
+                        <img src="img/kazim1.jpg" class="img-responsive" alt="Jewish Quarter" />
+                        <h4>Jewish Quarter</h4>
+                        <span>Was the centre of Jewish life in Kraków</span>
+                        <p>
+                            For many centuries, Kazimierz was a place of coexistence and interpenetration of ethnic Polish and Jewish cultures, its north-eastern part of the district was historic Jewish, whose Jewish inhabitants were forcibly relocated in 1941 by the German occupying forces into the Krakow ghetto just across the river in Podgórze.
+                        </p>
+                        <div class="read_btn">
+                            <a class="btn btn_blue"><i class="fa fa-info"> Read more</i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 p0 trip_item">
+                        <img src="img/kopiec1.jpg" class="img-responsive" alt="Kosciuszko Mound" />
+                        <h4>Kosciuszko Mound</h4>
+                        <span>Dedicated to Polish (and American) military hero</span>
+                        <p>
+                            Completed in 1823, the Kościuszko Mound is a well-manicured corkscrew of a hill, surrounded by a brick fortification at its base. The mound was created to honor Polish nationalist Tadeusz Kościuszko who was renowned and beloved for his battles against foreign powers in Poland.
+                        </p>
+                        <div class="read_btn">
+                            <a class="btn btn_blue"><i class="fa fa-info">Read more</i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <div class="main_footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer_item">
+                            <h5>Office address:</h5>
+                            <p>31-810 Cracow</p>
+                            <p>NIP: 6751519438</p>
+                            <p>REGON: 999999999</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer_item">
+                            <h5>
+                                Social media
+                            </h5>
+                            <button class="soc_btn_white">
+                                <i class="fa fa-facebook"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="footer_item">
+                            <h5>Contact details:</h5>
+                            <p>Tel: <b>+48 570 042 478</b></p>
+                            <p>Email: <b>wellcometocracow@onet.pl</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="copyright_block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="copy_txt">
+                            2018 &copy; VALEN Sp z o. o. &bull; All rights reserved
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/ang_module.js"></script>
+</body>
+</html>

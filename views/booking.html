@@ -1,0 +1,77 @@
+﻿<div class="menuComp" onabort="showHideTitleBlock()">
+    <div class="menuCompHeader">
+        <h3>Our tours</h3>
+        <button class="hide_comp_btn"><span class="glyphicon glyphicon-remove" ng-click="hideComp()" onclick="showHideTitleBlock()"></span></button>
+    </div>
+
+    <div class="menuCompBody">
+        <form class="form-horizontal" name="bookingForm" novalidate ng-submit="addNewOrder(newOrder, bookingForm.$valid)">
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-4 control-label">First name</label>
+                <div class="col-sm-8">
+                    <input type="text" id="inputName" name="name" class="form-control" required ng-model="newOrder.clientName" />
+                    <div class="error" ng-show="showError">
+                        {{getError(bookingForm.name.$error)}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputLastName" class="col-sm-4 control-label">Last name</label>
+                <div class="col-sm-8">
+                    <input type="text" id="inputLastName" name="lastName" class="form-control" required ng-model="newOrder.clientLastName" />
+                    <div class="error" ng-show="showError">
+                        {{getError(bookingForm.lastName.$error)}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="placesCount" class="col-sm-4 control-label">Count of places</label>
+                <div class="col-sm-8">
+                    <input type="number" id="placesCount" name="placesCount" class="form-control" required ng-model="newOrder.clientCount" />
+                    <div class="error" ng-show="showError">
+                        {{getError(bookingForm.placesCount.$error)}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="phoneNumber" class="col-sm-4 control-label">Phone number</label>
+                <div class="col-sm-8">
+                    <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" required ng-model="newOrder.clientPhoneNumber" />
+                    <div class="error" ng-show="showError">
+                        {{getError(bookingForm.phoneNumber.$error)}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="tour" class="col-sm-4 control-label">Choose a tour</label>
+                <div class="col-sm-8">
+                    <select id="tour" name="tour" class="form-control" required ng-model="newOrder.tourName">
+                        <option>Wieliczka Salt Mine</option>
+                        <option>Auschwitz-Birkenau</option>
+                        <option>Zakopane</option>
+                        <option>Termal pools</option>
+                        <option>Bochnia Salt Mine</option>
+                        <option>Airport</option>
+                    </select>
+                    <div class="error" ng-show="showError">
+                        {{getError(bookingForm.tour.$error)}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="dateTour" class="col-sm-4 control-label">Choose date</label>
+                <div class="col-sm-8">
+                    <input type="date" id="dateTour" name="dateTour" class="form-control" required ng-model="newOrder.tourDate" />
+                    <div class="error" ng-show="showError">
+                        {{getError(bookingForm.dateTour.$error)}}
+                    </div>
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-sm-offset-4 col-sm-4">
+                    <button type="submit" class="btn btn-primary btn_book">Book</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

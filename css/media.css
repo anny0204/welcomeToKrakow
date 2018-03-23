@@ -1,0 +1,99 @@
+﻿/*Large Devices, Wide Screen*/
+@media only screen and (max-width: 1200px) {
+
+}
+
+/*Medium Devices, Desktops*/
+@media only screen and (max-width: 992px) {
+    
+    .work_block img {
+        display:flex;
+        width:100%;
+    }
+    .trip_item {
+        margin-bottom:15px;
+        padding:30px 10px;
+
+    }
+    .read_btn {
+        left:30px;
+        right:30px;
+        bottom:30px;
+    }
+
+    .menu li {
+        padding: 0 5px;
+    }
+}
+
+/*Small Devices, Wide Tablets*/
+@media only screen and (max-width: 768px) {
+    header {
+        height:600px;
+        background-image: url('/img/header.jpg');
+        background-size:cover;
+    }
+
+    nav {
+        height: 60px;
+        line-height:60px;
+        background-color:#2a2e48;
+        position:fixed;
+    }
+
+    .logo {
+        padding-top:5px;
+    }
+
+    .menu-btn {
+        width:40px;
+        height:40px;
+        border-radius:50%;
+        background-color:#6c6acc;
+        color:#fff;
+    }
+
+        .menu-btn span {
+            top:-15px;
+        }
+    #top_menu {
+        background-color:#2a2e48;
+        padding: 15px 0;
+        position: relative
+    }
+
+    .menu li {
+        display: block;
+        text-align:center;
+    }
+
+        .menu li a {
+            display:block;
+        }
+
+            .menu li a:hover {
+                background-color:#000;
+                color:#fff;
+            }
+    
+    .topLine {
+        display:none;
+    }
+
+    .titleBlock {
+        margin-top:130px;
+    }
+
+}
+
+/*Extra Small Devices, Phones*/
+@media only screen and (max-width: 480px) {
+
+}
+
+/*Custom, iPhone Retina*/
+@media only screen and (max-width: 320px) {
+
+}
+
+
