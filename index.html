@@ -2,7 +2,7 @@
 <html lang="en" ng-app="mainModuleApp">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>Wellcome to Krakow</title>
+    <title>Welcome to Krakow</title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <link href="img/favicon.ico" rel="icon"/>
@@ -45,9 +45,9 @@
                             <ul class="menu" id="mainMenu">
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/tours">Tours</a></li>
-                                <li><a href="/booking" onclick="showHideTitleBlock()">Booking</a></li>
-                                <li><a href="#">Photos</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/booking" ng-click="showHideTitleBlock()">Booking</a></li>
+                                <li><a href="/photos">Photos</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="titleBlock" id="titleBlock">
-                            <a href="/booking" class="my_btn btn_md btn" onclick="showHideTitleBlock()">Book now</a>
+                            <a href="/booking" class="my_btn btn_md btn" ng-click="showHideTitleBlock()">Book now</a>
                         </div>
                         <div ng-view></div>
                     </div>
@@ -242,7 +242,19 @@
             </div>
         </div>
     </footer>
-
+    <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
+    <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB4SNKr1UOxwgXxDQSpoqO8-vxL01EzsQc",
+    authDomain: "my-project-34319.firebaseapp.com",
+    databaseURL: "https://my-project-34319.firebaseio.com",
+    projectId: "my-project-34319",
+    storageBucket: "",
+    messagingSenderId: "526875527477"
+  };
+  firebase.initializeApp(config);
+    </script>
     <script src="scripts/main.js"></script>
     <script src="scripts/ang_module.js"></script>
 </body>

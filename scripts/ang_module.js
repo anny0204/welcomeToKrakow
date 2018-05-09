@@ -15,6 +15,14 @@
         templateUrl: "/views/booking.html"
     });
 
+    $routeProvider.when("/photos", {
+        templateUrl: "/views/photos.html"
+    });
+
+    $routeProvider.when("/contact", {
+        templateUrl: "/views/contact.html"
+    });
+
     $routeProvider.when("/", {
         templateUrl: "/views/main_info.html"
     });
@@ -25,11 +33,10 @@
 })
 .controller("mainModuleCtrl", function ($scope, $location) {
 
-    $scope.isTitleBlockVisible = true;
-
     $scope.hideComp = function () {
         $location.path("/");
         $scope.showError = false;
+        $scope.showHideTitleBlock();
     }
 
     $scope.getError = function (error) {
@@ -43,10 +50,17 @@
         if (isValid) {
             $scope.showError = false;
             $scope.orderDetails = orderDetails;
-            showHideTitleBlock();
             $location.path("/");
         } else {
             $scope.showError = true;
         }
+    };
+
+    $scope.showHideTitleBlock = function() {
+        let titleBlock = document.getElementById("titleBlock");
+        if ($location.path() == '/booking')
+            titleBlock.style.display = "none"
+        else
+            titleBlock.style.display = "block";
     };
 })

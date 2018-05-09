@@ -36,12 +36,11 @@
 
     })();
 
-};
+    //Scroll top on cleackmain menu
 
-function showHideTitleBlock() {
-    let titleBlock = document.getElementById("titleBlock");
-    if (titleBlock.style.display != "none")
-        titleBlock.style.display = "none"
-    else
-        titleBlock.style.display = "block";
+    $('.menu li').click(function (e) {
+        window.scrollTo(0,0);
+    });
+
+
 };
