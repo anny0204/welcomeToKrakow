@@ -31,12 +31,24 @@
         templateUrl: '/views/main_info.html'
     });
 })
-.controller("mainModuleCtrl", function ($scope, $location) {
+    .controller("mainModuleCtrl", function ($scope, $location) {
 
-    $scope.hideComp = function () {
+    $scope.isBookButton = true;
+
+    $scope.hideBookingComp = function () {
+        $scope.showHideTitleBlockOnBocking();
         $location.path("/");
         $scope.showError = false;
-        $scope.showHideTitleBlock();
+    }
+
+    $scope.hideComp = function () {
+        titleBlock = document.getElementById("titleBlock");
+        if ($location.path() == '/booking') {
+            $scope.isBookButton = true;
+            titleBlock.style.display = "block";
+        }
+        $location.path("/");
+        $scope.showError = false;
     }
 
     $scope.getError = function (error) {
@@ -56,11 +68,25 @@
         }
     };
 
-    $scope.showHideTitleBlock = function() {
+        $scope.showHideTitleBlockOnBocking = function () {
+            alert($scope.isBookButton);
         let titleBlock = document.getElementById("titleBlock");
-        if ($location.path() == '/booking')
-            titleBlock.style.display = "none"
-        else
+        if ($scope.isBookButton || $location.path() == '/booking') {
+            titleBlock.style.display = "none";
+            $scope.isBookButton = false;
+        }
+        else {
             titleBlock.style.display = "block";
-    };
+            $scope.isBookButton = true;
+        }
+        };
+
+        $scope.showHideTitleBlock = function () {
+            let titleBlock = document.getElementById("titleBlock");
+            if (!$scope.isBookButton || $location.path() == '/booking') {
+                titleBlock.style.display = "block";
+                $scope.isBookButton = true;
+            }
+        };
+
 })

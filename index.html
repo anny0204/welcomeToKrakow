@@ -43,11 +43,11 @@
 
                         <div class="collapse navbar-collapse navbar-right" id="top_menu">
                             <ul class="menu" id="mainMenu">
-                                <li><a href="/about">About</a></li>
-                                <li><a href="/tours">Tours</a></li>
-                                <li><a href="/booking" ng-click="showHideTitleBlock()">Booking</a></li>
-                                <li><a href="/photos">Photos</a></li>
-                                <li><a href="/contact">Contact</a></li>
+                                <li><a href="/about" id="view_about" ng-click="showHideTitleBlock()">About</a></li>
+                                <li><a href="/tours" id="view_tours" ng-click="showHideTitleBlock()">Tours</a></li>
+                                <li><a href="/booking" id="view_booking" ng-click="showHideTitleBlockOnBocking()">Booking</a></li>
+                                <li><a href="/photos" id="view_photos" ng-click="showHideTitleBlock()">Photos</a></li>
+                                <li><a href="/contact" id="view_contact" ng-click="showHideTitleBlock()">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -58,7 +58,7 @@
                 <div class="row">
                     <div class="col-sm-8 col-sm-offset-2">
                         <div class="titleBlock" id="titleBlock">
-                            <a href="/booking" class="my_btn btn_md btn" ng-click="showHideTitleBlock()">Book now</a>
+                            <a href="/booking" class="my_btn btn_md btn" ng-click="showHideTitleBlockOnBocking()">Book now</a>
                         </div>
                         <div ng-view></div>
                     </div>
