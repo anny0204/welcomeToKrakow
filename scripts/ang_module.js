@@ -69,7 +69,6 @@
     };
 
         $scope.showHideTitleBlockOnBocking = function () {
-            alert($scope.isBookButton);
         let titleBlock = document.getElementById("titleBlock");
         if ($scope.isBookButton || $location.path() == '/booking') {
             titleBlock.style.display = "none";

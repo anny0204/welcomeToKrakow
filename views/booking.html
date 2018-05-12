@@ -12,7 +12,8 @@
                 </div>
                 <label for="inputName" class="col-sm-4 control-label">First name</label>
                 <div class="col-sm-8">
-                    <input type="text" id="inputName" name="name" class="form-control" required ng-model="newOrder.clientName" />
+                    <input type="text" id="inputName" name="name" class="form-control" required ng-model="newOrder.clientName"
+                         onblur="checkSuccessInput()"/>
                     <div class="error" ng-show="showError">
                         {{getError(bookingForm.name.$error)}}
                     </div>
@@ -24,7 +25,8 @@
                 </div>
                 <label for="inputLastName" class="col-sm-4 control-label">Last name</label>
                 <div class="col-sm-8">
-                    <input type="text" id="inputLastName" name="lastName" class="form-control" required ng-model="newOrder.clientLastName" />
+                    <input type="text" id="inputLastName" name="lastName" class="form-control" required ng-model="newOrder.clientLastName" 
+                           onblur="checkSuccessInput()"/>
                     <div class="error" ng-show="showError">
                         {{getError(bookingForm.lastName.$error)}}
                     </div>
@@ -36,7 +38,8 @@
                 </div>
                 <label for="placesCount" class="col-sm-4 control-label">Count of places</label>
                 <div class="col-sm-8">
-                    <input type="number" id="placesCount" name="placesCount" class="form-control" required ng-model="newOrder.clientCount" />
+                    <input type="number" id="placesCount" name="placesCount" class="form-control" required ng-model="newOrder.clientCount" 
+                           onblur="checkSuccessInput()"/>
                     <div class="error" ng-show="showError">
                         {{getError(bookingForm.placesCount.$error)}}
                     </div>
@@ -48,7 +51,8 @@
                 </div>
                 <label for="phoneNumber" class="col-sm-4 control-label">Phone number</label>
                 <div class="col-sm-8">
-                    <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" required ng-model="newOrder.clientPhoneNumber" />
+                    <input type="text" id="phoneNumber" name="phoneNumber" class="form-control" required ng-model="newOrder.clientPhoneNumber" 
+                           onblur="checkSuccessInput()"/>
                     <div class="error" ng-show="showError">
                         {{getError(bookingForm.phoneNumber.$error)}}
                     </div>
@@ -60,7 +64,8 @@
                 </div>
                 <label for="tour" class="col-sm-4 control-label">Choose a tour</label>
                 <div class="col-sm-8">
-                    <select id="tour" name="tour" class="form-control" required ng-model="newOrder.tourName">
+                    <select id="tour" name="tour" class="form-control" required ng-model="newOrder.tourName"
+                            onblur="checkSuccessInput()">
                         <option>Wieliczka Salt Mine</option>
                         <option>Auschwitz-Birkenau</option>
                         <option>Zakopane</option>
@@ -79,7 +84,8 @@
                 </div>
                 <label for="dateTour" class="col-sm-4 control-label">Choose date</label>
                 <div class="col-sm-8">
-                    <input type="date" id="dateTour" name="dateTour" class="form-control" required ng-model="newOrder.tourDate" />
+                    <input type="date" id="dateTour" name="dateTour" class="form-control" required ng-model="newOrder.tourDate" 
+                           onblur="checkSuccessInput()"/>
                     <div class="error" ng-show="showError">
                         {{getError(bookingForm.dateTour.$error)}}
                     </div>

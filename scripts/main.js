@@ -41,6 +41,18 @@
     $('.menu li').click(function (e) {
         window.scrollTo(0,0);
     });
-
-
 };
+
+//Add/remove styles to the input elements
+function checkSuccessInput() {
+    if (window.event.target.value) {
+        if (window.event.target.parentNode.classList.contains('has-error'))
+            window.event.target.parentNode.classList.remove('has-error');
+        window.event.target.parentNode.classList.add('has-success')
+    }
+    else {
+        if (window.event.target.parentNode.classList.contains('has-success'))
+            window.event.target.parentNode.classList.remove('has-success');
+        window.event.target.parentNode.classList.add('has-error');
+    }
+}

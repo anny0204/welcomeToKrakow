@@ -11,11 +11,11 @@
 /*BUTTONS*/
 
 .my_btn {
-    background-color:#6c6acc;
+    background-color: #6c6acc;
     color: #fff;
-    border:none;
-    text-transform:uppercase;
-    font-weight:bold;
+    border: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .btn_md {
